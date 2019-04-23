@@ -65,7 +65,6 @@
     <CudaCompile>
       <CInterleavedPTX>false</CInterleavedPTX>
       <GenerateLineInfo>true</GenerateLineInfo>
-      <MaxRegCount>80</MaxRegCount>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Keep>true</Keep>
       <CodeGeneration>compute_61,sm_61</CodeGeneration>
@@ -107,7 +106,6 @@
     </Link>
     <CudaCompile>
       <CInterleavedPTX>false</CInterleavedPTX>
-      <MaxRegCount>80</MaxRegCount>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Keep>true</Keep>
       <CodeGeneration>compute_61,sm_61</CodeGeneration>
@@ -181,36 +179,23 @@
     <ClInclude Include="x11\cuda_x11_simd512_sm2.cuh" />
     <ClInclude Include="x16\cuda_x16.h" />
     <CudaCompile Include="Algo256\bmw.cu" />
-    <CudaCompile Include="Algo256\cuda_bmw.cu">
-      <MaxRegCount>76</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="Algo256\cuda_bmw.cu" />
     <CudaCompile Include="crypto\cryptolight.cu" />
-    <CudaCompile Include="crypto\cryptolight-core.cu">
-      <MaxRegCount>64</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="crypto\cryptolight-core.cu" />
     <CudaCompile Include="crypto\cryptonight.cu" />
-    <CudaCompile Include="crypto\cryptonight-core.cu">
-      <MaxRegCount>64</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="crypto\cryptonight-extra.cu">
-      <MaxRegCount>255</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="crypto\cryptonight-core.cu" />
+    <CudaCompile Include="crypto\cryptonight-extra.cu" />
     <ClInclude Include="crypto\cn_aes.cuh" />
     <ClInclude Include="crypto\cn_blake.cuh" />
     <ClInclude Include="crypto\cn_groestl.cuh" />
     <ClInclude Include="crypto\cn_jh.cuh" />
     <ClInclude Include="crypto\cn_keccak.cuh" />
     <ClInclude Include="crypto\cn_skein.cuh" />
-    <CudaCompile Include="crypto\wildkeccak.cu">
-      <MaxRegCount>128</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="crypto\wildkeccak.cu" />
     <CudaCompile Include="equi\cuda_equi.cu">
       <AdditionalOptions> -Xptxas -dlcm=ca -Xptxas -dscm=cs %(AdditionalOptions)</AdditionalOptions>
-      <MaxRegCount>0</MaxRegCount>
     </CudaCompile>
-    <CudaCompile Include="neoscrypt\cuda_neoscrypt.cu">
-      <MaxRegCount>160</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="neoscrypt\cuda_neoscrypt.cu" />
     <ClCompile Include="scrypt-jane.cpp" />
     <ClCompile Include="scrypt.cpp" />
     <ClCompile Include="sia\sia-rpc.cpp" />
@@ -338,9 +323,7 @@
     </CudaCompile>
     <CudaCompile Include="heavy\cuda_groestl512.cu">
     </CudaCompile>
-    <CudaCompile Include="heavy\cuda_hefty1.cu">
-      <MaxRegCount>80</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="heavy\cuda_hefty1.cu" />
     <CudaCompile Include="heavy\cuda_keccak512.cu">
     </CudaCompile>
     <CudaCompile Include="heavy\cuda_sha256.cu">
@@ -358,14 +341,11 @@
     </CudaCompile>
     <CudaCompile Include="blake2b.cu" />
     <CudaCompile Include="Algo256\blake256.cu">
-      <MaxRegCount>64</MaxRegCount>
       <AdditionalOptions Condition="'$(Configuration)'=='Release'">--ptxas-options="-dlcm=cg" %(AdditionalOptions)</AdditionalOptions>
       <FastMath>true</FastMath>
     </CudaCompile>
     <CudaCompile Include="Algo256\blake2s.cu" />
-    <CudaCompile Include="Algo256\decred.cu">
-      <MaxRegCount>128</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="Algo256\decred.cu" />
     <CudaCompile Include="Algo256\vanilla.cu" />
     <CudaCompile Include="Algo256\keccak256.cu" />
     <CudaCompile Include="Algo256\cuda_blake256.cu" />
@@ -374,28 +354,19 @@
     <CudaCompile Include="Algo256\cuda_fugue256.cu" />
     <CudaCompile Include="Algo256\cuda_groestl256.cu" />
     <CudaCompile Include="Algo256\cuda_keccak256.cu" />
-    <CudaCompile Include="Algo256\cuda_keccak256_sm3.cu">
-      <MaxRegCount>92</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="Algo256\cuda_keccak256_sm3.cu" />
     <CudaCompile Include="Algo256\cuda_skein256.cu" />
     <CudaCompile Include="lbry\cuda_sha256_lbry.cu" />
     <CudaCompile Include="lbry\cuda_sha512_lbry.cu" />
     <CudaCompile Include="lbry\cuda_lbry_merged.cu" />
     <CudaCompile Include="lbry\lbry.cu" />
     <CudaCompile Include="pentablake.cu">
-      <MaxRegCount>80</MaxRegCount>
       <AdditionalOptions Condition="'$(Configuration)'=='Release'">--ptxas-options="-dlcm=cg" %(AdditionalOptions)</AdditionalOptions>
       <FastMath>true</FastMath>
     </CudaCompile>
-    <CudaCompile Include="quark\cuda_bmw512.cu">
-      <MaxRegCount>128</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="quark\cuda_jh512.cu">
-      <MaxRegCount>80</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="quark\cuda_quark_blake512.cu">
-      <MaxRegCount>80</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="quark\cuda_bmw512.cu" />
+    <CudaCompile Include="quark\cuda_jh512.cu" />
+    <CudaCompile Include="quark\cuda_quark_blake512.cu" />
     <CudaCompile Include="cuda_checkhash.cu">
       <CInterleavedPTX>false</CInterleavedPTX>
     </CudaCompile>
@@ -405,9 +376,7 @@
     </CudaCompile>
     <CudaCompile Include="quark\cuda_quark_groestl512.cu">
     </CudaCompile>
-    <CudaCompile Include="quark\cuda_quark_keccak512.cu">
-      <MaxRegCount>88</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="quark\cuda_quark_keccak512.cu" />
     <CudaCompile Include="quark\cuda_skein512.cu">
     </CudaCompile>
     <CudaCompile Include="quark\quarkcoin.cu" />
@@ -432,20 +401,14 @@
     <ClInclude Include="lyra2\cuda_lyra2Z_sm5.cuh" />
     <CudaCompile Include="polytimos.cu" />
     <CudaCompile Include="sia\sia.cu" />
-    <CudaCompile Include="skein.cu">
-      <MaxRegCount>64</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="cuda_skeincoin.cu">
-      <MaxRegCount>48</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="skein.cu" />
+    <CudaCompile Include="cuda_skeincoin.cu" />
     <CudaCompile Include="phi\phi.cu" />
     <CudaCompile Include="phi\phi2.cu" />
     <CudaCompile Include="phi\cuda_phi2.cu" />
     <CudaCompile Include="phi\cuda_phi2_cubehash512.cu" />
     <CudaCompile Include="skunk\skunk.cu" />
-    <CudaCompile Include="skunk\cuda_skunk.cu">
-      <MaxRegCount>64</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="skunk\cuda_skunk.cu" />
     <CudaCompile Include="skunk\cuda_skunk_streebog.cu" />
     <ClInclude Include="tribus\cuda_echo512_aes.cuh" />
     <CudaCompile Include="tribus\cuda_echo512_final.cu" />
@@ -455,16 +418,10 @@
     <CudaCompile Include="x11\cuda_x11_echo.cu">
     </CudaCompile>
     <CudaCompile Include="x11\cuda_x11_luffa512.cu" />
-    <CudaCompile Include="x11\cuda_x11_luffa512_Cubehash.cu">
-      <MaxRegCount>76</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="x11\cuda_x11_shavite512.cu">
-      <MaxRegCount>128</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="x11\cuda_x11_luffa512_Cubehash.cu" />
+    <CudaCompile Include="x11\cuda_x11_shavite512.cu" />
     <ClInclude Include="x11\cuda_x11_simd512_func.cuh" />
-    <CudaCompile Include="x11\cuda_x11_simd512.cu">
-      <MaxRegCount>64</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="x11\cuda_x11_simd512.cu" />
     <CudaCompile Include="x11\cuda_streebog.cu" />
     <CudaCompile Include="x11\cuda_streebog_maxwell.cu" />
     <CudaCompile Include="x11\c11.cu" />
@@ -478,9 +435,7 @@
     <CudaCompile Include="x11\x11.cu" />
     <CudaCompile Include="x11\x11evo.cu" />
     <CudaCompile Include="x12\x12.cu" />
-    <CudaCompile Include="x13\cuda_x13_hamsi512.cu">
-      <MaxRegCount>72</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="x13\cuda_x13_hamsi512.cu" />
     <CudaCompile Include="x13\cuda_x13_fugue512.cu">
     </CudaCompile>
     <CudaCompile Include="x13\x13.cu" />
@@ -504,9 +459,7 @@
     <CudaCompile Include="x17\x17.cu" />
     <CudaCompile Include="x17\cuda_x17_haval256.cu">
     </CudaCompile>
-    <CudaCompile Include="x17\cuda_x17_sha512.cu">
-      <MaxRegCount>80</MaxRegCount>
-    </CudaCompile>
+    <CudaCompile Include="x17\cuda_x17_sha512.cu" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\ccminer.ico" />
