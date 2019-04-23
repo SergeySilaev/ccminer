@@ -317,19 +317,13 @@
     <CudaCompile Include="sha256\cuda_sha256q.cu" />
     <CudaCompile Include="sha256\sha256q.cu" />
     <CudaCompile Include="zr5.cu" />
-    <CudaCompile Include="heavy\cuda_blake512.cu">
-    </CudaCompile>
-    <CudaCompile Include="heavy\cuda_combine.cu">
-    </CudaCompile>
-    <CudaCompile Include="heavy\cuda_groestl512.cu">
-    </CudaCompile>
+    <CudaCompile Include="heavy\cuda_blake512.cu" />
+    <CudaCompile Include="heavy\cuda_combine.cu" />
+    <CudaCompile Include="heavy\cuda_groestl512.cu" />
     <CudaCompile Include="heavy\cuda_hefty1.cu" />
-    <CudaCompile Include="heavy\cuda_keccak512.cu">
-    </CudaCompile>
-    <CudaCompile Include="heavy\cuda_sha256.cu">
-    </CudaCompile>
-    <CudaCompile Include="heavy\heavy.cu">
-    </CudaCompile>
+    <CudaCompile Include="heavy\cuda_keccak512.cu" />
+    <CudaCompile Include="heavy\cuda_sha256.cu" />
+    <CudaCompile Include="heavy\heavy.cu" />
     <CudaCompile Include="heavy\bastion.cu" />
     <CudaCompile Include="heavy\cuda_bastion.cu" />
     <CudaCompile Include="JHA\jha.cu" />
@@ -337,8 +331,7 @@
     <CudaCompile Include="JHA\cuda_jha_compactionTest.cu">
       <AdditionalOptions>-Xptxas "-abi=yes" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
-    <CudaCompile Include="JHA\cuda_jha_keccak512.cu">
-    </CudaCompile>
+    <CudaCompile Include="JHA\cuda_jha_keccak512.cu" />
     <CudaCompile Include="blake2b.cu" />
     <CudaCompile Include="Algo256\blake256.cu">
       <AdditionalOptions Condition="'$(Configuration)'=='Release'">--ptxas-options="-dlcm=cg" %(AdditionalOptions)</AdditionalOptions>
@@ -374,11 +367,9 @@
       <AdditionalOptions Condition="'$(Configuration)'=='Release'">-Xptxas "-abi=yes" %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)'=='Debug'">-Xptxas "-abi=yes" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
-    <CudaCompile Include="quark\cuda_quark_groestl512.cu">
-    </CudaCompile>
+    <CudaCompile Include="quark\cuda_quark_groestl512.cu" />
     <CudaCompile Include="quark\cuda_quark_keccak512.cu" />
-    <CudaCompile Include="quark\cuda_skein512.cu">
-    </CudaCompile>
+    <CudaCompile Include="quark\cuda_skein512.cu" />
     <CudaCompile Include="quark\quarkcoin.cu" />
     <CudaCompile Include="quark\nist5.cu" />
     <CudaCompile Include="qubit\deep.cu" />
@@ -415,8 +406,7 @@
     <CudaCompile Include="tribus\tribus.cu" />
     <ClInclude Include="x11\cuda_x11_aes.cuh" />
     <CudaCompile Include="x11\cuda_x11_cubehash512.cu" />
-    <CudaCompile Include="x11\cuda_x11_echo.cu">
-    </CudaCompile>
+    <CudaCompile Include="x11\cuda_x11_echo.cu" />
     <CudaCompile Include="x11\cuda_x11_luffa512.cu" />
     <CudaCompile Include="x11\cuda_x11_luffa512_Cubehash.cu" />
     <CudaCompile Include="x11\cuda_x11_shavite512.cu" />
@@ -436,8 +426,7 @@
     <CudaCompile Include="x11\x11evo.cu" />
     <CudaCompile Include="x12\x12.cu" />
     <CudaCompile Include="x13\cuda_x13_hamsi512.cu" />
-    <CudaCompile Include="x13\cuda_x13_fugue512.cu">
-    </CudaCompile>
+    <CudaCompile Include="x13\cuda_x13_fugue512.cu" />
     <CudaCompile Include="x13\x13.cu" />
     <CudaCompile Include="x13\cuda_hsr_sm3.cu" />
     <CudaCompile Include="x13\hsr.cu" />
@@ -457,8 +446,7 @@
     <CudaCompile Include="x17\hmq17.cu" />
     <CudaCompile Include="x17\sonoa.cu" />
     <CudaCompile Include="x17\x17.cu" />
-    <CudaCompile Include="x17\cuda_x17_haval256.cu">
-    </CudaCompile>
+    <CudaCompile Include="x17\cuda_x17_haval256.cu" />
     <CudaCompile Include="x17\cuda_x17_sha512.cu" />
   </ItemGroup>
   <ItemGroup>
